@@ -19,6 +19,7 @@ return new class extends Migration
             $table->float('shipping_price')->default(0);
             $table->string('status')->default('PENDING');
             $table->string('payment')->default('MANUAL');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
